@@ -107,6 +107,7 @@ def create_json_file(city: str, data: list) -> None:
 
 
 def run_scraper(self, city):
+    city=city or 'spb'
     pages = get_num_of_pages(city)
-    result = get_data_with_mp(city, pages)
+    result = get_data_with_mp(city, 10)
     create_json_file(city, result)
