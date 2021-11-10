@@ -22,7 +22,14 @@ class Command(BaseCommand):
         histogram.add_argument('--city', type=str)
 
     def handle(self, *args, **options):
-        run_scraper(self, options['city'])
+        self.run_scraper(options['city'])
+
+    def run_scraper(self, city):
+        city = city or 'spb'
+        pages = get_num_of_pages(city)
+        pages = 10
+        result = get_data_with_mp(city, pages)
+        create_json_file(city, result)
 
 
 city_search = {
@@ -104,11 +111,3 @@ def create_json_file(city: str, data: list) -> None:
     with open(f"./site_data/parsed_site_data/{city}_estate_data1.json",
               "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
-
-
-def run_scraper(self, city):
-    city = city or 'spb'
-    pages = get_num_of_pages(city)
-    pages = 10
-    result = get_data_with_mp(city, pages)
-    create_json_file(city, result)

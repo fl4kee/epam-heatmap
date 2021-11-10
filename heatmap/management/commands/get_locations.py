@@ -20,7 +20,12 @@ class Command(BaseCommand):
         histogram.add_argument("--city", type=str)
 
     def handle(self, *args, **options):
-        run_get_locations(self, options["city"])
+        self.run_get_locations(self, options["city"])
+
+    def run_get_locations(self, city):
+        locations = get_locations_mp(city, 10)
+        set_of_locations = create_set_of_locations(locations)
+        create_json_file(city, set_of_locations)
 
 
 def open_file(city):
@@ -132,9 +137,3 @@ def create_json_file(city: str, data: list[dict]) -> None:
         f"./site_data/locations/{city}_locations.json", "w", encoding="utf-8"
     ) as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
-
-
-def run_get_locations(self, city):
-    locations = get_locations_mp(city, 10)
-    set_of_locations = create_set_of_locations(locations)
-    create_json_file(city, set_of_locations)
