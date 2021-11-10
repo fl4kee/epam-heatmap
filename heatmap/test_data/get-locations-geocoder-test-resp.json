@@ -1,0 +1,69 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "16",
+               "short_name" : "16",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Polotskaya Ulitsa",
+               "short_name" : "Polotskaya Ulitsa",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Zapadnyy administrativnyy okrug",
+               "short_name" : "Zapadnyy administrativnyy okrug",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Moskva",
+               "short_name" : "Moskva",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Kuntsevo",
+               "short_name" : "Kuntsevo",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Moskva",
+               "short_name" : "Moskva",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Russia",
+               "short_name" : "RU",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "121351",
+               "short_name" : "121351",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Polotskaya Ulitsa, 16, Moskva, Russia, 121351",
+         "geometry" : {
+            "location" : {
+               "lat" : 55.7337228,
+               "lng" : 37.42492790000001
+            },
+            "location_type" : "RANGE_INTERPOLATED",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 55.73507178029151,
+                  "lng" : 37.42627688029151
+               },
+               "southwest" : {
+                  "lat" : 55.73237381970851,
+                  "lng" : 37.42357891970851
+               }
+            }
+         },
+         "place_id" : "Ei1Qb2xvdHNrYXlhIFVsaXRzYSwgMTYsIE1vc2t2YSwgUnVzc2lhLCAxMjEzNTEiGhIYChQKEgntvWePwk61RhEdyyfNkocEJBAQ",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
