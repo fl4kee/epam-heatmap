@@ -20,6 +20,10 @@ class Command(BaseCommand):
 
 
 def create_histogram(self, city, data) -> None:
+    """
+    creates histogram based on passed data
+    by default creates average prices for spb
+    """
     CITY = city or "spb"
     NEEDED_DATA = data or "price"
 
